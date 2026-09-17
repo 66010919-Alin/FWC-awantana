@@ -13,7 +13,7 @@
     }
 
         .navbar {
-            position: fixed;          /* ติดด้านบนตลอดตอนเลื่อน */
+            position: fixed;
             top: 0; left: 0;
             width: 100%;
             height: 70px;
@@ -32,14 +32,14 @@
             text-decoration: none;
         }
         .menu {
-            display: flex;            /* เมนูเรียงแนวนอน */
-            list-style: none;         /* เอาจุดหน้า list ออก */
+            display: flex;
+            list-style: none;
             gap: 24px;
         }
         .menu a {
             font-size: 20px;
             color: #ffffff;
-            text-decoration: none;    /* เอาเส้นใต้ออก */
+            text-decoration: none;
         }
         .menu a:hover { text-decoration: underline; }
 
@@ -68,16 +68,7 @@
             line-height: 1.5;
         }
 
-        /* ทำให้ Home อยู่ตรงกลาง */
-        #home {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #home h1 {
-            font-size: 60px;
-        }
+        
 
         /* จัด Skills */
         #skills {
@@ -90,11 +81,7 @@
             margin-bottom: 30px;
         }
 
-        #skills ul {
-            font-size: 28px;
-            line-height: 1.8;
-            list-style: none;
-        }
+
         #skills .photo {
             width: 300px;
             height: 300px;
@@ -105,6 +92,32 @@
             width: 600px;
             height: 300px;
             object-fit: cover;
+            margin: 30px auto;
+        }
+
+
+        /* จัด work exp */
+        #workexperience {
+            padding: 70px 10%;
+            text-align: center;
+        }
+
+        #workexperience h2 {
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+        
+        #workexperience .photo {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin: 30px auto;
+        }
+
+        #workexperience .photo1 {
+            width: 600px;
+            height: 300px;
+            object-fit: contain;
             margin: 30px auto;
         }
 
@@ -119,12 +132,16 @@
         }
 
         #projects p {
-            font-size: 28px;
+            margin-bottom: 30px;
+            font-size: 18px;
         }
 
-        #projects .photo {
-            width: 1000px;
-            height: 600px;
+        #projects .photo,
+        #projects .photo1 {
+            width: 700px;
+            height: 500px;
+            object-fit: contain;
+            margin: 30px auto;
         }
 
         /* จัด Contact */
@@ -138,66 +155,80 @@
         }
 
         #contact a {
-            font-size: 25px;
+            display: inline-block;
+            font-size: 0;
+            line-height: 0;
+            text-decoration: none;
+            margin: 20px 10px;
         }
 
-        /* ===== รองรับมือถือ ===== */
+        #contact img {
+            display: block;
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin: 0;
+        }
 
+
+    /* กำหนดขนาดของโทรศัพท์ */
         @media (max-width: 768px) {
+            .navbar {
+                height: auto;
+                padding: 15px;
+                flex-direction: column;
+                gap: 10px;
+            }
 
             .menu {
                 gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .menu a {
-                font-size: 14px;
+                font-size: 16px;
             }
 
-            #home h1 {
+            #about h2,
+            #skills h2,
+            #workexperience h2,
+            #projects h2,
+            #contact h2 {
                 font-size: 40px;
             }
 
-            #about .photo {
-                width: 230px;
-                height: 280px;
-            }
-
-            #about h2 {
-                font-size: 45px;
-            }
-
-            #about p {
-                font-size: 19px;
-            }
-
-            #skills h2,
-            #projects h2,
-            #contact h2 {
-                font-size: 45px;
-            }
-
-            #skills ul {
-                font-size: 20px;
-            }
-
+            #about p,
             #projects p {
                 font-size: 20px;
             }
 
-            #contact a {
-                font-size: 20px;
+            #about .photo {
+                width: 250px;
+                height: auto;
+            }
+
+            #workexperience .photo,
+            #workexperience .photo1,
+            #skills .photo,
+            #skills .photo1,
+            #projects .photo {
+                width: 100%;
+                height: auto;
             }
         }
+
     </style>
 </head>
 <body>
 
   <nav class="navbar">
-    <a href="#home" class="logo">Portfolio</a>
+    <a href="index.html" class="logo">Portfolio</a>
     <ul class="menu">
-      <li><a href="#home">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#workexperience">WorkExperience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -205,33 +236,65 @@
 
   <section id="about" class="section dark">
     <img src="images/guide/guide 1.jpg" alt="Guide" class="photo">
-    <h2>About Me</h2>
-    <p>Hello my name is Thanapat Khaekam AKA Guide from KMITL </p>
+    <h2>❤ About Me ❤</h2>
+        <p>Hello my name is Thanapat Khaekam AKA Guide from KMITL </p>
+            
+            <h>i love to play game,make music,play basketball and sleep zzzz🥱 </h>
   </section>
   
 
-  <section id="skills" class="section dark">
+  <section id="skills" class="section dark"> 
     <h2>My Skills</h2>
     <div class="skill-images">
         <img src="images/guide/skill 1.1.jpg" alt="Guide" class="photo1">
         <img src="images/guide/skill 1.0.jpg" alt="Guide" class="photo">
     </div>
-    <h2>Music Producer </h2>
-    <h3>In love with sound i always trying to level up my mastering skills. </h3>
+    <h1>Music Producer </h1>
+    <h>In love with sound i always trying to level up my mastering skills. </h>
+    
+  </section>
+
+
+  <section id="workexperience" class="section dark"> 
+    <h2>My WorkExperience</h2>
+    <div class="WorkExperience-images">
+        <img src="images/guide/workExp 1.jpg" alt="Guide" class="photo1">
+        <img src="images/guide/workExp 2.jpg" alt="Guide" class="photo1">
+    </div>
+    <h1>Cinema staff </h1>
+    <h>I love watching movies, so I decided to work at a cinema. It was a lot of fun, and the best part was getting to watch movies for free!
+ </h>
+    
   </section>
 
   <section id="projects" class="section dark">
     <h2>Projects</h2>
-    <p>Projects</p>
+    <h1>1.First-Year Final Project ATM</h1>
+    <p>This is my final project from my first year. It was a great project that I really enjoyed working on. It was also a little tiring and stressful at times, but in the end, we got through it successfully and I’m really proud of what we accomplished.
+ </p>
     <img src="images/guide/project 1.0.jpg" alt="Guide" class="photo">
-    <p>...</p>
+
+    <h1>2.TAO BIN Profit & Cost Analysis Project</h1>
+    <p>This is a project I completed in the first semester of my second year. I chose this topic because I bought a drink from a TAO BIN machine and became curious about how the machine’s costs and profits are calculated.
+        
+ </p>
+ <img src="images/guide/project 2.0.png" alt="Guide" class="photo">
+ <img src="images/guide/project 3.0.jpg" alt="Guide" class="photo">
   </section>
 
   <section id="contact" class="section">
     <h2>Contact</h2>
-    <a href="https://github.com/tkhaekam">GitHub</a> |
-    <a href="https://www.instagram.com/thanapatkh1?stkn=dHZia2JsdGVjZ2Y2&utm_source=qr">Instagram</a> |
-    
+
+    <a href="https://github.com/tkhaekam" target="_blank">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"
+             alt="GitHub">
+    </a>
+
+    <a href="https://www.instagram.com/thanapatkh1?stkn=dHZia2JsdGVjZ2Y2&utm_source=qr"
+       target="_blank">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/3840px-Instagram_logo_2016.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail"
+             alt="Instagram">
+    </a>
   </section>
 
 </body>
