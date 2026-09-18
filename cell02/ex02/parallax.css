@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img1 {
+    background-image: url("https://picsum.photos/id/1025/1200/800");
+}
+
+.img2 {
+    background-image: url("https://picsum.photos/id/237/1200/800");
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.section-dark {
+    background-color: black;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}

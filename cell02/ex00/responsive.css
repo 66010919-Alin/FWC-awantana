@@ -1,0 +1,16 @@
+body {
+      margin: 0;
+    }
+    table {
+      width: 100%;
+      height: 100vh;
+      border-collapse: collapse;
+    }
+    .first-cell {
+      background-color: #d741d2;
+      width: 50%;
+    }
+    .second-cell {
+      background-color: #f174c3;
+      width: 50%;
+    }

@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.card {
+    width: 300px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px #cccccc;
+}
+
+.card td {
+    padding: 0;
+}
+
+.profile {
+    display: block;
+    width: 100%;
+}
+
+.card p {
+    color: gray;
+}
+
+.socials img {
+    width: 24px;
+    height: 24px;
+    margin: 10px 5px;
+}
+
+.contact {
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.contact:hover {
+    background-color: #444444;
+}
